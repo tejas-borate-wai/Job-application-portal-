@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Received</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            margin: 0;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(to right, #ff9800, #ff5722);
+            padding: 25px;
+            border-radius: 10px 10px 0 0;
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0px 0px 5px rgba(255, 152, 0, 0.6);
+            }
+
+            to {
+                box-shadow: 0px 0px 15px rgba(255, 87, 34, 1);
+            }
+        }
+
+        .content {
+            text-align: left;
+            padding: 20px;
+            color: #ddd;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .details {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .details p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+        .resume-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #00c853, #009624);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .resume-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bbb;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .highlight {
+            color: #ff9800;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            🎉 Application Received!
+        </div>
+
+        <div class="content">
+            <p>Dear <span class="highlight">{{name}}</span>,</p>
+            <p>Thank you for applying for the <strong class="highlight">{{title}}</strong> position. We have received
+                your application and our team will review it soon.</p>
+
+            <div class="details">
+                <p><strong>Name:</strong> {{full_name}}</p>
+                <p><strong>Email:</strong> {{email}}</p>
+                <p><strong>Phone:</strong> {{phone}}</p>
+                <p><strong>Cover Letter:</strong> {{coverLetter}}</p>
+            </div>
+
+
+        </div>
+
+        <div class="footer">
+            <p>We will get back to you soon. If you have any questions, feel free to reach out.</p>
+            <p>Best regards,<br><strong>Job Application Portal Team</strong></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
